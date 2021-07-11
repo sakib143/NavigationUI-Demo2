@@ -19,6 +19,7 @@ class SendCashFragment : Fragment(R.layout.fragment_send_cash) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val navController = view.findNavController()
 
         val receiverName: String = args.name
         val amount: Int = args.amount
@@ -31,6 +32,16 @@ class SendCashFragment : Fragment(R.layout.fragment_send_cash) {
         btnNext.setOnClickListener() {
             val action = SendCashFragmentDirections.actionSendCashFragmentToConfirmDialogFragment3(receiverName,selectedAmount)
             findNavController().navigate(action)
+        }
+
+        btnDone.setOnClickListener() {
+            val action = SendCashFragmentDirections.actionSendCashFragmentToHomeFragment2()
+            findNavController().navigate(action)
+        }
+
+
+        btnCancel.setOnClickListener() {
+            navController.popBackStack()
         }
     }
 }
