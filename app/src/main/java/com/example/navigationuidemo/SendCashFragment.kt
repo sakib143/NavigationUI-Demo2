@@ -21,6 +21,11 @@ class SendCashFragment : Fragment(R.layout.fragment_send_cash) {
 
         val navController = view.findNavController()
 
+        edtAmount.setText(SampleData.defaultValue.value.toString())
+        SampleData.defaultValue.observe(viewLifecycleOwner) {
+            edtAmount.setText(it.toString())
+        }
+
         val receiverName: String = args.name
         val amount: Int = args.amount
 

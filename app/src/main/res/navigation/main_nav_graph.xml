@@ -103,4 +103,9 @@
             android:name="amount"
             app:argType="integer" />
     </dialog>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.navigationuidemo.SettingsFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
 </navigation>
