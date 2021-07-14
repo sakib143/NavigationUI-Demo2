@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsFragment">
+    tools:context=".settings.SettingsFragment">
 
     <EditText
         android:id="@+id/edtDefaultAmount"
@@ -17,6 +17,15 @@
         android:id="@+id/btnSaveDefaultAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="SAVE" />
+
+    <Button
+        android:id="@+id/btnAboutApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="About this app" />
 
 </LinearLayout>
